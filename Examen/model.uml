@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_CA6n0GPsEei7IraBKD7UfQ" name="NewModel">
+  <packageImport xmi:id="_18ByQGPuEei7IraBKD7UfQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_N-J14GPsEei7IraBKD7UfQ" name="Series" visibility="public">
+    <ownedAttribute xmi:id="_ghhqcGPsEei7IraBKD7UfQ" name="titulo" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_jh_x0GPsEei7IraBKD7UfQ" name="anyoInicio" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_lzkL0GPsEei7IraBKD7UfQ" name="sinopsis" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_RMgBMGPsEei7IraBKD7UfQ" name="Documental" visibility="private">
+    <generalization xmi:id="_31uwwGPsEei7IraBKD7UfQ" general="_N-J14GPsEei7IraBKD7UfQ"/>
+    <ownedAttribute xmi:id="_trlQ8GPsEei7IraBKD7UfQ" name="tematica" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_UIJS8GPsEei7IraBKD7UfQ" name="Ficcion" visibility="public">
+    <generalization xmi:id="_5A0D0GPsEei7IraBKD7UfQ" general="_N-J14GPsEei7IraBKD7UfQ"/>
+    <ownedAttribute xmi:id="_pnZp0GPsEei7IraBKD7UfQ" name="genero" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Y2fRYGPsEei7IraBKD7UfQ" name="Temporadas" visibility="public">
+    <ownedAttribute xmi:id="_64qWQGPsEei7IraBKD7UfQ" name="fechaProduccion" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="__tvO0GPsEei7IraBKD7UfQ" name="fechaEstreno" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_TIXbgGPtEei7IraBKD7UfQ" memberEnd="_TIXbgWPtEei7IraBKD7UfQ _TIYpoWPtEei7IraBKD7UfQ" navigableOwnedEnd="_TIYpoWPtEei7IraBKD7UfQ">
+    <ownedEnd xmi:id="_TIXbgWPtEei7IraBKD7UfQ" name="seriess" type="_N-J14GPsEei7IraBKD7UfQ" association="_TIXbgGPtEei7IraBKD7UfQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TIYCkGPtEei7IraBKD7UfQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TIYpoGPtEei7IraBKD7UfQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_TIYpoWPtEei7IraBKD7UfQ" name="temporadass" type="_Y2fRYGPsEei7IraBKD7UfQ" aggregation="composite" association="_TIXbgGPtEei7IraBKD7UfQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TIYpomPtEei7IraBKD7UfQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TIYpo2PtEei7IraBKD7UfQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ZRTvsGPtEei7IraBKD7UfQ" name="Capitulos" visibility="public">
+    <ownedAttribute xmi:id="_bAgccGPtEei7IraBKD7UfQ" name="titulo_capìtulo" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_d34SMGPtEei7IraBKD7UfQ" name="duracion" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_f3mHMGPtEei7IraBKD7UfQ" name="numero" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_jcoUMGPtEei7IraBKD7UfQ" name="sipnosis" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_n1HXYGPtEei7IraBKD7UfQ" memberEnd="_n1H-cGPtEei7IraBKD7UfQ _n1JMkGPtEei7IraBKD7UfQ" navigableOwnedEnd="_n1JMkGPtEei7IraBKD7UfQ">
+    <ownedEnd xmi:id="_n1H-cGPtEei7IraBKD7UfQ" name="temporadass" type="_Y2fRYGPsEei7IraBKD7UfQ" association="_n1HXYGPtEei7IraBKD7UfQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_n1IlgGPtEei7IraBKD7UfQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_n1IlgWPtEei7IraBKD7UfQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_n1JMkGPtEei7IraBKD7UfQ" name="capituloss" type="_ZRTvsGPtEei7IraBKD7UfQ" aggregation="composite" association="_n1HXYGPtEei7IraBKD7UfQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_n1JzoGPtEei7IraBKD7UfQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_n1JzoWPtEei7IraBKD7UfQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_vry_wGPtEei7IraBKD7UfQ" name="Usuarios" visibility="public">
+    <ownedAttribute xmi:id="_xVLYYGPtEei7IraBKD7UfQ" name="nombre" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_yk8-MGPtEei7IraBKD7UfQ" name="apellidos" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_0FdHoGPtEei7IraBKD7UfQ" name="email" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_2WkOoGPtEei7IraBKD7UfQ" name="fechaNacimiento" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_-ZXAYGPtEei7IraBKD7UfQ" memberEnd="_-ZXAYWPtEei7IraBKD7UfQ _-ZXAZGPtEei7IraBKD7UfQ" navigableOwnedEnd="_-ZXAYWPtEei7IraBKD7UfQ _-ZXAZGPtEei7IraBKD7UfQ">
+    <ownedEnd xmi:id="_-ZXAYWPtEei7IraBKD7UfQ" name="usuarioss" type="_vry_wGPtEei7IraBKD7UfQ" association="_-ZXAYGPtEei7IraBKD7UfQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-ZXAYmPtEei7IraBKD7UfQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-ZXAY2PtEei7IraBKD7UfQ" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_-ZXAZGPtEei7IraBKD7UfQ" name="capituloss" type="_ZRTvsGPtEei7IraBKD7UfQ" association="_-ZXAYGPtEei7IraBKD7UfQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-ZXAZWPtEei7IraBKD7UfQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-ZXAZmPtEei7IraBKD7UfQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_B1PRYGPuEei7IraBKD7UfQ" name="Criticas" visibility="public">
+    <ownedAttribute xmi:id="_N1jooGPuEei7IraBKD7UfQ" name="comentario" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_vH-rkGPuEei7IraBKD7UfQ" name="fecha" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_EybbQGPuEei7IraBKD7UfQ" memberEnd="_EybbQWPuEei7IraBKD7UfQ _EybbRGPuEei7IraBKD7UfQ" navigableOwnedEnd="_EybbQWPuEei7IraBKD7UfQ _EybbRGPuEei7IraBKD7UfQ">
+    <ownedEnd xmi:id="_EybbQWPuEei7IraBKD7UfQ" name="usuarioss" type="_vry_wGPtEei7IraBKD7UfQ" association="_EybbQGPuEei7IraBKD7UfQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EybbQmPuEei7IraBKD7UfQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EybbQ2PuEei7IraBKD7UfQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_EybbRGPuEei7IraBKD7UfQ" name="criticass" type="_B1PRYGPuEei7IraBKD7UfQ" association="_EybbQGPuEei7IraBKD7UfQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EybbRWPuEei7IraBKD7UfQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EybbRmPuEei7IraBKD7UfQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_VZxA8GPuEei7IraBKD7UfQ" name="criticassToCapituloss" memberEnd="_VZxA8WPuEei7IraBKD7UfQ _VZxoAGPuEei7IraBKD7UfQ" navigableOwnedEnd="_VZxoAGPuEei7IraBKD7UfQ">
+    <ownedEnd xmi:id="_VZxA8WPuEei7IraBKD7UfQ" name="criticass" type="_B1PRYGPuEei7IraBKD7UfQ" association="_VZxA8GPuEei7IraBKD7UfQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VZxA8mPuEei7IraBKD7UfQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VZxA82PuEei7IraBKD7UfQ" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_VZxoAGPuEei7IraBKD7UfQ" name="capituloss" type="_ZRTvsGPtEei7IraBKD7UfQ" aggregation="shared" association="_VZxA8GPuEei7IraBKD7UfQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VZxoAWPuEei7IraBKD7UfQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VZxoAmPuEei7IraBKD7UfQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Z9pb0GPuEei7IraBKD7UfQ" name="criticassToSeriess" memberEnd="_Z9pb0WPuEei7IraBKD7UfQ _Z9qp8GPuEei7IraBKD7UfQ" navigableOwnedEnd="_Z9qp8GPuEei7IraBKD7UfQ">
+    <ownedEnd xmi:id="_Z9pb0WPuEei7IraBKD7UfQ" name="criticass" type="_B1PRYGPuEei7IraBKD7UfQ" association="_Z9pb0GPuEei7IraBKD7UfQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Z9qC4GPuEei7IraBKD7UfQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Z9qC4WPuEei7IraBKD7UfQ" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_Z9qp8GPuEei7IraBKD7UfQ" name="seriess" type="_N-J14GPsEei7IraBKD7UfQ" aggregation="shared" association="_Z9pb0GPuEei7IraBKD7UfQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Z9qp8WPuEei7IraBKD7UfQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Z9qp8mPuEei7IraBKD7UfQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>
